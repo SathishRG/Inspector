@@ -142,7 +142,6 @@
                 android:id="@+id/tvNoOfVehicleValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:textColor="#4E4E4E"
                 android:textSize="@dimen/font_size_12"
                 app:layout_constraintBottom_toBottomOf="parent"
