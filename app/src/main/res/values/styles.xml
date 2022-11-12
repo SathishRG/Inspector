@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Login"/>
+    <style name="Login.LoginEditText">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--Register Initial-->
+    <style name="Login.Label">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Login.Label1">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="SellerInfo"/>
+    <style name="SellerInfo.Title">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="SellerInfo.Label">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/dark_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="SellerInfo.Value">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/seller_info_value</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MediumSizeButton" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_width">47dp</item>
+        <item name="android:layout_height">22dp</item>
+    </style>
+    <style name="SmallSizeButton" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">9sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">20dp</item>
+
+    </style>
+    <style name= "BlackMediumSizeButton" parent="MediumSizeButton" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bgd_badge_red</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+    <!-- Buttons with Logo Ends -->
+    <style name="ButtonComponent" parent="Widget.AppCompat.Button">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Black Button Design Starts -->
+    <style name="ButtonRedActive" parent="ButtonComponent">
+        <item name="android:background">@drawable/btn_red_active_border</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+    <style name="ButtonWhiteActive" parent="ButtonComponent">
+        <item name="android:background">@drawable/rectangle_button</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <style name="ButtonGreenActive" parent="ButtonComponent">
+        <item name="android:background">@drawable/btn_green_active_border</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="ButtonBlackDisabled" parent="ButtonComponent">
+        <item name="android:background">@drawable/btn_black_disabled_border</item>
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+    <!--Default Text Field-->
+    <style name="DefaultTextField" />
+    <style name="DefaultTextField.Label">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="DefaultTextField.Value">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="DefaultTextField.ErrorMessage">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Default Dropdown-->
+    <style name="DefaultDropdown" />
+    <style name="DefaultDropdown.Label">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="DefaultDropdown.Value">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="DefaultDropdown.ErrorMessage">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Default Dropdown Menu Item-->
+    <style name="DefaultDropdownMenuItem" />
+    <style name="DefaultDropdownMenuItem.Value">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">#FF4081</item>  // you can change the color of the yearPiker dialog
+        <item name="android:textColorPrimary">#FF4081</item> // you can change the color of the yearPiker dialog
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spinner_background</item>
+        <item name="android:popupBackground">#FFFFFF</item>
+        <item name="android:divider">#000</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

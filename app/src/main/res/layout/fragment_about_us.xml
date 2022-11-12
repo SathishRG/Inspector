@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dim_gray">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/about_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Login.Label"
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="20dp"
+            android:text="Specialties: Every Friday 9:30 AM, We are glad to serve you. At South Chicago Auto Auction, we put quality over quantity. We are about people, results, and relationships. By being selective, we are able to work with the most reliable car dealerships and banks. By taking the time to get to know our clients, we are bale to make better matches between buyer and seller. We specializes in Detail Facilities, Auto Check, Affordable Car reconditioning, Electronic Check In, High Tech Live, Online Bidding Service, Supply Storage for Dealers &amp; Finance Companies Only. Brands: Acura, Audi, BMW, Cadillac, Buick, Chevrolet, Chrysler, Dodge, Ford, GMC, Honda, Hyundai, Infiniti, Isuzu, Jaguar, Jeep, Kia, Land Rover, Lexus, Lincoln, Mazda, Mercedes Benz, Mercury, MINI, Mitsubishi, Nissan, Oldsmobile, Plymouth, Pontiac, Saab, Saturn, Subaru, Suzuki, Toyota, Volkswagen, Volvo History: Established in 2008. By treating people with care and respect, we are able to build long-term relationships based on honesty, integrity, and open communication Through this approach, we have successful sold thousands of cars to buyers throughout Illinois. Whether you're in need of stocking our inventory or lookina to re-market your vehicles, South Chicago Auto Auction can help. Whether youre in need of stocking your inventory or looking to remarked your vehicles, South Chicago AutoAuction can help. Through our approach of quality over quantity, we have successfully sold thousands of cars to buyers through our Illinois. We are about people results, and relationships.  Want more information about South Chicago Auto Auction? Please feel free to contact us and we would be happy to assist you."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

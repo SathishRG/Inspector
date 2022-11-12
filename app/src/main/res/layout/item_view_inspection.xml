@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/cp_edit_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inspectionRequestDetailsCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSellerDetails"
+                style="@style/SellerInfo.Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/inspection_details"
+                android:textColor="@color/app_bar"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+                app:layout_constraintHorizontal_bias="0.56"
+                app:layout_constraintHorizontal_weight="6.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/SellerInfo.Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/inspection_status"
+                android:textColor="@color/app_bar"
+                android:textSize="@dimen/font_size_12"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="3.5"
+                app:layout_constraintStart_toEndOf="@+id/tvSellerDetails"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSellerNameValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="#4E4E4E"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="7"
+                app:layout_constraintStart_toEndOf="@+id/tvSellerName"
+                app:layout_constraintTop_toTopOf="@+id/tvSellerName" />
+
+            <TextView
+                android:id="@+id/tvSellerName"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/inspection_location"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toStartOf="@+id/tvSellerNameValue"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerDetails"
+                app:layout_editor_absoluteY="50dp" />
+
+            <TextView
+                android:id="@+id/tvSellerPhoneNo"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/inspection_schedule"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerName" />
+
+            <TextView
+                android:id="@+id/tvSellerPhoneValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text=""
+                android:textColor="#4E4E4E"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSellerPhoneNo"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerDetails"
+                app:layout_constraintStart_toEndOf="@+id/tvSellerPhoneNo"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerNameValue" />
+
+            <TextView
+                android:id="@+id/tvSellerAddress"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/inspection_time_slot"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerPhoneNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerPhoneNo" />
+
+            <TextView
+                android:id="@+id/tvInspectionLocation"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text=""
+                android:textColor="#4E4E4E"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerPhoneValue"
+                app:layout_constraintStart_toEndOf="@+id/tvSellerAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerPhoneValue" />
+
+            <TextView
+                android:id="@+id/tvNoOfVehicle"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/inspection_vehicle"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerPhoneNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellerAddress" />
+
+            <TextView
+                android:id="@+id/tvNoOfVehicleValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="#4E4E4E"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvInspectionLocation"
+                app:layout_constraintStart_toEndOf="@+id/tvNoOfVehicle"
+                app:layout_constraintTop_toBottomOf="@+id/tvInspectionLocation" />
+
+            <TextView
+                android:id="@+id/tvStatusValue"
+                style="@style/Login.Label1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_12"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNoOfVehicleValue"
+                app:layout_constraintEnd_toEndOf="@+id/tvStatus"
+                app:layout_constraintStart_toEndOf="@+id/tvSellerDetails"
+                app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+            <View
+                android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSellerPhoneNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoOfVehicleValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

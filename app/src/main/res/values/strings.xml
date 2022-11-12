@@ -1,0 +1,270 @@
+<resources>
+    <string name="app_name" translatable="false">Inspector</string>
+
+    <string name="general_content_description">This is an image</string>
+
+    <string name="title_become_inspector">Become an Inspector</string>
+
+    <string name="network_connection_error">Internet connection lost, please retry again</string>
+    <string name="network_default_error">Something wrong happened, please retry again</string>
+    <string name="network_internal_error">Our systems got an error, please retry again</string>
+    <string name="network_server_not_available">Our services are under maintenance, please retry after some time
+    </string>
+    <string name="server_connection_error">Not able to connect, please retry again</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="network_login_again">Please log in again</string>
+    <string name="login">LOGIN</string>
+    <string name="login_btn">Login</string>
+    <string name="or">OR</string>
+    <string name="logging_in">Logging in&#8230;</string>
+    <string name="remember_me">Remember me</string>
+    <!--Forgot Password-->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_ok">Ok</string>
+    <string name="forgot_password_cancel">Cancel</string>
+
+    <string name="error_forgot_password_email">Please enter valid email</string>
+
+    <!--  Loading messages  -->
+    <string name="loading">Loading&#8230;</string>
+    <string name="uploading_image">Uploading Image&#8230;</string>
+    <string name="saving_profile">Saving Profile&#8230;</string>
+
+    <!--Inspector Form-->
+    <string name="inspector_title">Became an inspector</string>
+    <string name="inspector_form">Inspector Form</string>
+    <string name="inspector_name">Name</string>
+    <string name="inspector_address">Address</string>
+    <string name="inspector_state">State</string>
+    <string name="inspector_city">City</string>
+    <string name="inspector_zip_code">Zip Code</string>
+    <string name="inspector_email">Email</string>
+    <string name="inspector_phone">Phone</string>
+    <string name="inspector_position">Position</string>
+    <string name="inspector_experience">Experience</string>
+    <string name="inspector_submit">Submit</string>
+
+    <!--Home-->
+    <string name="home">Home</string>
+    <string name="home_total_cp">Total Completed</string>
+    <string name="home_total_ins">Total Inspections</string>
+    <string name="home_pending_ins">Pending Inspections</string>
+    <string name="home_total_completed">This month completed</string>
+    <string name="home_total_reopen">Total Reopen</string>
+    <string name="home_inspections">Inspections</string>
+    <string name="home_inspection_request">Inspection Requests</string>
+    <string name="home_inspection_counts">Inspection counts</string>
+    <string name="home_add_vehicle">Add vehicle</string>
+    <string name="add_vehicle_form">Add Vehicle Form</string>
+
+    <!--Menu-->
+    <string name="menu_my_profile">My Profile</string>
+    <string name="menu_app_settings">App Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_career">Career</string>
+    <string name="menu_about">About</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_logout">Logout</string>
+
+    <!--My Profile-->
+    <string name="mp_date_of_birth">Date of Birth</string>
+    <string name="mp_email_id">Email Id</string>
+    <string name="mp_contact">Contact</string>
+    <string name="mp_address">Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="title_change_password">Change Password</string>
+
+    <!--Change Password-->
+    <string name="cp_old_password">Old Password</string>
+    <string name="cp_new_password">New Password</string>
+    <string name="cp_confirm_password">Confirm Password</string>
+    <string name="cp_cancel">Cancel</string>
+    <string name="cp_update">Update</string>
+    <string name="ok">OK</string>
+    <!--Contact Us-->
+    <string name="cu">Contact us</string>
+    <string name="cu_address">Address</string>
+    <string name="cu_email">Email</string>
+    <string name="cu_contact">Contact</string>
+
+    <!--Logout-->
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure want to logout?</string>
+    <!--Inspection-->
+    <string name="title_inspection">Inspection</string>
+    <string name="title_pending_inspection">Pending Inspections</string>
+    <string name="title_completed">Completed</string>
+    <string name="inspection_status">Status</string>
+    <string name="inspection_details">Inspection Details</string>
+    <string name="inspection_location">Location</string>
+    <string name="inspection_schedule">Schedule</string>
+    <string name="inspection_time_slot">Time Slot</string>
+    <string name="inspection_vehicle">Vehicle</string>
+    <string name="inspection_id">Inspection Id</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="start">Start</string>
+    <string name="continu">Continue</string>
+    <string name="details">Details</string>
+
+    <!--Inspection Requests-->
+    <string name="title_inspection_request">Inspection Requests</string>
+    <string name="inspection_seller_details">Seller Details</string>
+    <string name="inspection_seller_name">Seller Name</string>
+    <string name="seller_address">Address</string>
+    <string name="seller_phone_no">Phone no</string>
+    <string name="txt_no_of_cars">No of cars</string>
+    <!--Seller Details-->
+    <string name="title_seller_details">Seller Details</string>
+    <string name="title_seller_info">Seller Info</string>
+    <string name="title_seller_id">Seller Id</string>
+    <string name="title_seller_comments">Comments</string>
+    <string name="car_info">Car Info</string>
+    <string name="year">Year</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="thank_you">Thank you</string>
+    <string name="inspection_car_details">Inspection Car Details</string>
+    <!--Inspection-->
+    <string name="title_general_info">General Info</string>
+    <string name="inspection_date">Inspection Date</string>
+    <string name="seller_name">Seller Name</string>
+    <string name="vehicle_vin">Vehicle Vin</string>
+    <string name="vehicle_year">Vehicle Year</string>
+    <string name="vehicle_make">Vehicle Make</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="odo_meter">Odo Meter</string>
+    <string name="engine_start">Engine Starts</string>
+    <string name="driveable">Driveable</string>
+    <string name="comments">Comments</string>
+    <string name="comments_hint">Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum</string>
+
+    <!---->
+    <string name="add_exterior_images">Add Exterior Images</string>
+    <string name="add_exterior_panel_images">Add Exterior Panel Images</string>
+    <string name="next">Next</string>
+
+    <!--Reject Confirmation-->
+    <string name="reject_confirmation">Reject Confirmation</string>
+    <string name="reject_reason">Reject Reason</string>
+    <string name="reject_comments">Comments</string>
+    <!--Cancel Confirmation-->
+    <string name="title_cancel_inspection">Cancel Inspection</string>
+    <string name="cancel_confirmation">Cancel Confirmation</string>
+    <string name="cancel_reason">Cancel Reason</string>
+    <string name="cancel_comments">Comments</string>
+
+    <!--Add Vehicle-->
+    <string name="title_add_vehicle">Add Vehicle</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_phone">Phone</string>
+    <string name="customer_address">Address</string>
+    <string name="Schedule">Schedule</string>
+    <string name="inspection_time">Inspection Time</string>
+
+    <string name="customer_name_empty">Customer Name can\'t be empty</string>
+    <string name="customer_phone_empty">Phone Number can\'t be empty</string>
+    <string name="customer_address_empty">Address can\'t be empty</string>
+    <string name="schedule_empty">Schedule can\'t be empty</string>
+    <string name="inspection_time_empty">Inspection Time can\'t be empty</string>
+    <string name="vehicle_vin_empty">Vehicle Vin can\'t be empty</string>
+    <string name="comment_empty">Comment can\'t be empty</string>
+
+    <string name="email_field_empty">Email can\'t be empty</string>
+    <string name="password_field_empty">Password can\'t be empty</string>
+    <string name="email_field_invalid">Not a valid email</string>
+    <string name="password_field_small_length">Password less than 6 digits</string>
+    <string name="phone_no_field_length">Phone no should be 10 digits</string>
+
+    <string name="old_pwd_field_empty">Old Password can\'t be empty</string>
+    <string name="new_pwd_field_empty">New Password can\'t be empty</string>
+    <string name="confirm_pwd_field_empty">Confirm Password can\'t be empty</string>
+    <string name="_new_confirm_field_empty">New and Confirm Password should be same</string>
+    <string name="old_new_field_empty">Old and New Password should not be same</string>
+
+    <string name="name_field_empty">Name can\'t be empty</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Welcome</string>
+    <string name="nav_header_subtitle">Raja</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_notification">Notification</string>
+    <string name="txt_general_submit">Submit</string>
+
+    <string name="txt_no_records">No request found</string>
+    <string name="txt_no_notification">No record found</string>
+    <string name="txt_clear_all">Clear All</string>
+    <string name="invalid_username">invalid_username</string>
+    <string name="invalid_password">invalid_password</string>
+    <string name="login_failed">login failed</string>
+    <string name="change_pwd_failed">Change Password failed</string>
+    <string name="forget_pwd_failed">Forget Password failed</string>
+    <string name="inspector_created">The Form was Submitted Successfully\nWe will be reach you very soon.</string>
+    <string name="seller_accepted">Successfully accepted request info\nadded into the inspections.</string>
+    <string name="add_inspector">Thank You!!!</string>
+    <string name="contact_message">Thank you so much for interesting in our business. Please feel free to call us or email us</string>
+    <string name="inspec_add_inspector">Add Inspector</string>
+    <string name="manually">Manually</string>
+    <string name="front">Front</string>
+    <string name="passenger_side">Passenger Side</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="ds_front_seat">DS Front Seat</string>
+    <string name="add_interior_images">Add Interior Images</string>
+    <string name="covered_power_train">Covered Power Train</string>
+    <string name="engine_bottom_end_noise">Engine Bottom End Noise</string>
+    <string name="automatic_transmission_operation">Automatic Transmission Operation</string>
+    <string name="transfer_case_operation">Transfer case Operation</string>
+    <string name="ds_front_door_case">Ds Front Door case</string>
+    <string name="differential_operation">Differential Operation</string>
+    <string name="add_multiple_images_videos">Add Multiple Images/Videos</string>
+    <string name="mechanical">Mechanical</string>
+    <string name="engine_upper_end">Engine Upper End</string>
+    <string name="engine_bottom_end">Engine Bottom End</string>
+    <string name="catalytic_converter_present">Catalytic Converter Present</string>
+    <string name="heater_runs_hot">Heater Runs Hot</string>
+    <string name="a_c_runs_hot">A/C Runs Hot</string>
+    <string name="no_check_engine_light_at_startup">No check Engine Light At Startup</string>
+    <string name="no_abs">No Abs</string>
+    <string name="no_srs_airbag_light">No SRS/Airbag Light</string>
+    <string name="upload_video_start_the_car_and_raise_the_engine_from_inside_the_car">Upload video-Start the car and raise the Engine from inside the car</string>
+    <string name="upload_video_stand_front_of_the_car_with_the_hood_open_if_its_possible_and_a_foot_away_from_the_car_record_the_engine_noise_and_engine_shake">Upload video-Stand front of the car with the hood open if its possible and a foot away from the car,Record the engine noise and engine shake</string>
+    <string name="upload_video_to_show_the_exaction_smoke_and_silencer_sound">Upload video-To show the exaction Smoke and silencer sound</string>
+    <string name="tires_amp_wheels"><![CDATA[Tires & Wheels]]></string>
+    <string name="_5_32_tread_depth">5/32 Tread Depth</string>
+    <string name="four_tires_condition">Four Tires Condition</string>
+    <string name="any_scratches_on_the_wheels">Any Scratches On The Wheels</string>
+    <string name="add_test_drive_video">Add Test drive Video</string>
+    <string name="differential">Differential</string>
+    <string name="transfer_case">Transfer Case</string>
+    <string name="steering_controls">Steering Controls</string>
+    <string name="breaking_senses">Breaking Senses</string>
+    <string name="exilator_level">Exilator Level</string>
+    <string name="manual_transmission">Manual Transmission</string>
+    <string name="automatic_transmission">Automatic Transmission</string>
+    <string name="test_drive">Test Drive</string>
+    <string name="driver_side">Driver Side</string>
+    <string name="rear_side">Rear Side</string>
+    <string name="upper_side">Upper Side</string>
+    <string name="rear_driver_side">Rear Driver Side</string>
+    <string name="rear_passenger_side">Rear Passenger Side</string>
+    <string name="undercarriage">Undercarriage</string>
+    <string name="undercarriage_nleft_side">Undercarriage\nLeft Side</string>
+    <string name="undercarriage_nright_side">Undercarriage\nRight Side</string>
+    <string name="undercarriage_nfront">Undercarriage\nFront</string>
+    <string name="undercarriage_nback">Undercarriage\nBack</string>
+    <string name="ds_front_panel">Ds Front Panel</string>
+    <string name="vin">VIN</string>
+    <string name="ds_front_door">Ds Front Door</string>
+    <string name="ds_rear_door">Ds Rear Door</string>
+    <string name="ds_rear_panel">Ds Rear panel</string>
+    <string name="cancel_inspection">Cancel Inspection</string>
+    <string name="upload_add_image_video">Upload Image/Video</string>
+    <string name="add_profile_photo">Add Profile Photo</string>
+
+
+</resources>

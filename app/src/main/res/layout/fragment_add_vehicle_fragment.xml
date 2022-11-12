@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dim_gray"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:paddingBottom="25dp">
+
+        <TextView
+            style="@style/SellerInfo.Title"
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/add_vehicle_form"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomerName"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/customer_name"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/dtfCustomerName"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomerPhone"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/customer_phone"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dtfCustomerName" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfCustomerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLength="10"
+            android:background="@drawable/edittext_rounded_corners"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerPhone"
+            app:valueHint="" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomerAddress"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_address"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfCustomerPhone"
+            app:layout_constraintTop_toBottomOf="@+id/dtfCustomerPhone" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfCustomerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvCustomerAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVehicleYear"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/vehicle_year"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfCustomerAddress"
+            app:layout_constraintTop_toBottomOf="@+id/dtfCustomerAddress" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfVehicleYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:clickable="true"
+            android:editable="false"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:drawableEnd="@drawable/drop_down_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvVehicleYear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVehicleYear" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVehicleMake"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/vehicle_make"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfVehicleYear"
+            app:layout_constraintTop_toBottomOf="@+id/dtfVehicleYear" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/dtfVehicleMake"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVehicleMake" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVehicleModel"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/vehicle_model"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfVehicleMake"
+            app:layout_constraintTop_toBottomOf="@+id/dtfVehicleMake" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/dtfVehicleModel"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvVehicleModel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVehicleModel" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomerVehicle"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/vehicle_vin"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfVehicleModel"
+            app:layout_constraintTop_toBottomOf="@+id/dtfVehicleModel" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfCustomerVehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:minHeight="48dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvCustomerVehicle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerVehicle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSchedule"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Schedule"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfCustomerVehicle"
+            app:layout_constraintTop_toBottomOf="@+id/dtfCustomerVehicle" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfSchedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:editable="false"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:drawableEnd="@drawable/drop_down_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvSchedule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSchedule" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInspectionTime"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/inspection_time"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfSchedule"
+            app:layout_constraintTop_toBottomOf="@+id/dtfSchedule" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfInspectionTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:editable="false"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:drawableEnd="@drawable/drop_down_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvInspectionTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInspectionTime" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVehicleComments"
+            style="@style/Login.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/comments"
+            android:textColor="@color/lbl_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dtfInspectionTime"
+            app:layout_constraintTop_toBottomOf="@+id/dtfInspectionTime" />
+
+        <EditText
+            style="@style/Login.Label"
+            android:id="@+id/dtfVehicleComments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corners"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvVehicleComments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVehicleComments" />
+
+        <include
+            android:id="@+id/btnAddVehicleSubmit"
+            layout="@layout/progress_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/inspector_submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dtfVehicleComments"
+            app:layout_constraintStart_toStartOf="@+id/dtfVehicleComments"
+            app:layout_constraintTop_toBottomOf="@+id/dtfVehicleComments" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

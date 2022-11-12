@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="android:inputType" />
+        <attr name="android:padding" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingBottom" />
+        <attr name="libIZO_setBackgroundColor" format="color" />
+        <attr name="libIZO_setBorderColor" format="color" />
+        <attr name="libIZO_setBorderView" format="boolean" />
+        <attr name="libIZO_setFont" format="string" />
+        <attr name="libIZO_setStrokeWidth" format="dimension" />
+        <attr name="libIZO_setCornerRadius" format="dimension" />
+        <attr name="libIZO_setClearIconVisible" format="boolean" />
+        <attr name="libIZO_clearIconTint" format="color" />
+        <attr name="libIZO_setCursorColor" format="color" />
+        <attr name="libIZO_hideShowPasswordIconTint" format="color" />
+        <attr name="libIZO_setPrefix" format="string" />
+        <attr name="libIZO_setPrefixTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="DefaultTextField">
+        <attr name="enableRightPlaceholder" format="boolean" />
+        <attr name="spaceForErrorMessage" format="boolean" />
+        <attr name="valueHint" format="string" />
+        <attr name="valueHintColor" format="color" />
+        <attr name="valueTextColor" format="color" />
+        <attr name="valueTextSize"  format="dimension" />
+        <attr name="valueErrorColor" format="color" />
+        <attr name="labelTextSize" format="string" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="rightPlaceholderImageSrc" format="reference" />
+        <attr name="rightLoadingLottie" format="string"  />
+    </declare-styleable>
+    <declare-styleable name="DefaultDropdown">
+        <attr name="spaceForErrorMessage" />
+        <attr name="valueHint" />
+        <attr name="valueHintColor" />
+        <attr name="valueTextColor" />
+        <attr name="valueTextSize" />
+        <attr name="valueErrorColor" />
+        <attr name="labelTextColor" />
+        <attr name="labelTextSize" />
+    </declare-styleable>
+    <declare-styleable name="DefaultSelectionTextInput">
+        <attr name="spaceForErrorMessage" />
+        <attr name="dropdownValueHint" format="string" />
+        <attr name="dropdownValueType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="icon" value="1" />
+        </attr>
+        <attr name="dropdownLabelText" format="string" />
+        <attr name="fieldHint" format="string" />
+        <attr name="valueErrorColor" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialSpinner">
+        <attr name="android:enabled" />
+        <attr name="android:focusable" />
+        <attr name="android:focusableInTouchMode" />
+        <attr name="android:prompt" />
+        <attr name="android:src" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:text" />
+        <attr name="android:gravity" />
+        <attr name="srcCompat" />
+        <attr name="spinnerMode" format="enum">
+            <enum name="dialog" value="0" />
+            <enum name="dropdown" value="1" />
+            <enum name="bottomsheet" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

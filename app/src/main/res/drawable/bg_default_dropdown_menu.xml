@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/defaultDropdownMenu" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/defaultDropdownMenuBorder" />
+    <corners android:radius="@dimen/default_dropdown_menu_radius" />
+</shape>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dim_gray"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivProfileImageView"
+                android:layout_width="111dp"
+                android:layout_height="111dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_profile_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/Login.Label1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/profile_name"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileImageView" />
+
+            <TextView
+                android:id="@+id/tvEmailId"
+                style="@style/Login.Label1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/profile_text_label_color"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvDateOfBirth"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusable="false"
+                android:text="@string/mp_date_of_birth"
+                android:textColor="@color/profile_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailId" />
+
+            <EditText
+                android:id="@+id/etDateOfBirthValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittext_rounded_corners"
+                android:minHeight="48dp"
+                android:textColor="@color/profile_text_label_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvDateOfBirth"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateOfBirth" />
+
+            <TextView
+                android:id="@+id/tvProfileEmailId"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/mp_email_id"
+                android:textColor="@color/profile_label"
+                app:layout_constraintEnd_toEndOf="@+id/etDateOfBirthValue"
+                app:layout_constraintStart_toStartOf="@+id/etDateOfBirthValue"
+                app:layout_constraintTop_toBottomOf="@+id/etDateOfBirthValue" />
+
+            <EditText
+                android:id="@+id/etProfileEmailIdValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_rounded_corners"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvProfileEmailId"
+                app:layout_constraintStart_toStartOf="@+id/tvProfileEmailId"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileEmailId" />
+
+            <TextView
+                android:id="@+id/tvContact"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/mp_contact"
+                android:textColor="@color/profile_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etProfileEmailIdValue"
+                app:layout_constraintTop_toBottomOf="@+id/etProfileEmailIdValue" />
+
+            <EditText
+                android:id="@+id/etContactValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittext_rounded_corners"
+                android:minHeight="48dp"
+                android:textColor="@color/profile_text_label_color"
+                app:layout_constraintEnd_toEndOf="@+id/tvContact"
+                app:layout_constraintStart_toStartOf="@+id/tvContact"
+                app:layout_constraintTop_toBottomOf="@+id/tvContact" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/font_size_24"
+                android:text="@string/mp_address"
+                android:textColor="@color/profile_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etContactValue"
+                app:layout_constraintTop_toBottomOf="@+id/etContactValue" />
+
+            <EditText
+                android:id="@+id/etAddressValue"
+                style="@style/Login.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittext_rounded_corners"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                style="@style/Login.Label1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/change_password"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/etAddressValue"
+                app:layout_constraintTop_toBottomOf="@+id/etAddressValue" />
+
+            <ProgressBar
+                android:id="@+id/progressBarProfileEdit"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

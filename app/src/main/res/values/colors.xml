@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#002768</color>
+    <color name="colorPrimaryDark">#001434</color>
+    <color name="app_bar">#001539</color>
+    <color name="colorAccent">#BD062C</color>
+    <color name="login_label">#002768</color>
+    <color name="login_edit_hint">#B8B8B8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_red">#BD062C</color>
+    <color name="tab_bg">#2C5BAA</color>
+    <color name="tab_text">#9F9F9F</color>
+    <color name="lbl_color">#343434</color>
+    <color name="btn_color">#BD062C</color>
+    <color name="home_text_color">#2C5BAA</color>
+    <color name="home_label_color">#002768</color>
+    <color name="home_count_color">#015B0A</color>
+    <color name="profile_label_color">#343434</color>
+    <color name="profile_text_label_color">#333333</color>
+    <color name="profile_label">#727272</color>
+    <color name="contact_border">#707070</color>
+    <color name="profile_name">#BF0202</color>
+    <color name="status_active">#008D0E</color>
+    <color name="status_pending">#FF9900</color>
+    <color name="status_reopen">#0055FF</color>
+    <color name="seller_info_value">#4E4E4E</color>
+    <color name="contentPrimary">#262324</color>
+    <color name="contentSecondary">#74715E</color>
+    <color name="contentDisable">#ABAA99</color>
+    <color name="light_disabled">#F2F2F2</color>
+    <color name="dark_black">#000000</color>
+    <color name="light_grey">#ABAA99</color>
+
+    <!--Custom Text-->
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#77766D</color>
+    <color name="dim_gray">#20000000</color>
+    <color name="gray">#C6C4C5</color>
+    <color name="red">#90424D</color>
+    <color name="transparentBlack">#77000000</color>
+    <color name="yellow">#FFEA21</color>
+
+    <color name="contentPrimaryInvert">#FFFFFF</color>
+    <color name="backgroundActive">#FFFFFF</color>
+    <color name="backgroundDisable">#F2F2F2</color>
+    <color name="borderActive">#262324</color>
+    <color name="borderNormal">#DBDAD2</color>
+    <color name="borderDisable">#262324</color>
+    <color name="actionLink">#236EF5</color>
+    <color name="actionError">#ED1D2C</color>
+    <color name="actionSuccess">#1BBE00</color>
+    <color name="actionWarning">#FFC107</color>
+    <color name="accentuateGreen">#D6FB97</color>
+    <color name="accentuateRed">#FF4438</color>
+    <color name="warmGrey01">#F7F5F2</color>
+    <color name="warmGrey02">#DBDAD2</color>
+    <color name="warmGrey03">#C9C8BC</color>
+    <color name="warmGrey04">#ABAA99</color>
+    <color name="warmGrey05">#848169</color>
+    <color name="warmGrey07">#3C3836</color>
+
+
+    <!--General-->
+    <color name="generalCheckIcon">@color/actionSuccess</color>
+    <color name="generalCloseIcon">@color/contentPrimary</color>
+    <color name="generalOtpBorderSelected">@color/borderActive</color>
+    <color name="generalOtpBorderUnselected">@color/borderNormal</color>
+    <color name="generalOtpBorderError">@color/actionError</color>
+    <color name="generalOtpPinItemBackground">@color/backgroundActive</color>
+    <color name="generalOtpPinItemBackgroundDisabled">@color/backgroundDisable</color>
+    <color name="generalOtpPinText">@color/black</color>
+    <color name="generalOtpPinTextDisabled">@color/contentDisable</color>
+    <color name="generalOtpPinCursor">@color/black</color>
+    <color name="generalDivider">@color/warmGrey01</color>
+    <color name="generalArrowRight">@color/contentPrimary</color>
+    <color name="generalDialogBackground">@color/white</color>
+    <color name="generalArrowDown">@color/contentPrimary</color>
+
+    <!--Default List Collapsable-->
+    <color name="defaultListCollapsableBackground">@color/white</color>
+    <color name="defaultListCollapsableValue">@color/contentPrimary</color>
+    <color name="defaultListCollapsableArrow">@color/contentPrimary</color>
+
+    <!--Default Text Field-->
+    <color name="defaultTextFieldDefaultError">@color/actionError</color>
+    <color name="defaultTextFieldLabel">@color/contentSecondary</color>
+    <color name="defaultTextFieldValueText">@color/contentPrimary</color>
+    <color name="defaultTextFieldValueHint">@color/contentDisable</color>
+    <color name="defaultTextFieldBorderNormal">@color/borderNormal</color>
+    <color name="defaultTextFieldBorderActive">@color/borderActive</color>
+    <color name="defaultTextFieldBorderDisabled">@color/borderDisable</color>
+    <color name="defaultTextFieldInputBackground">@color/white</color>
+    <color name="defaultTextFieldInputBackgroundDisabled">@color/backgroundDisable</color>
+
+    <!--Default Dropdown-->
+    <color name="defaultDropdownArrow">@color/contentPrimary</color>
+    <color name="defaultDropdownDefaultError">@color/actionError</color>
+    <color name="defaultDropdownLabel">@color/contentSecondary</color>
+    <color name="defaultDropdownValueText">@color/contentPrimary</color>
+    <color name="defaultDropdownValueHint">@color/contentDisable</color>
+    <color name="defaultDropdownBorderNormal">@color/borderNormal</color>
+    <color name="defaultDropdownBorderActive">@color/borderActive</color>
+    <color name="defaultDropdownBorderDisabled">@color/borderDisable</color>
+    <color name="defaultDropdownBackground">@color/white</color>
+    <color name="defaultDropdownBackgroundDisabled">@color/backgroundDisable</color>
+
+    <!--Default Dropdown Menu-->
+    <color name="defaultDropdownMenuBorder">@color/borderActive</color>
+    <color name="defaultDropdownMenu">@color/backgroundActive</color>
+
+    <!--Default Dropdown Menu Item-->
+    <color name="defaultDropdownMenuItemNormal">@color/transparent</color>
+    <color name="defaultDropdownMenuItemSelected">@color/backgroundDisable</color>
+    <color name="defaultDropdownMenuItemText">@color/contentPrimary</color>
+
+    <!--Default Selection Text Input-->
+    <color name="defaultSelectionTextInputArrow">@color/contentPrimary</color>
+    <color name="defaultSelectionTextInputDefaultError">@color/actionError</color>
+    <color name="defaultSelectionTextInputDropdownLabel">@color/contentSecondary</color>
+    <color name="defaultSelectionTextInputDropdownHint">@color/contentPrimary</color>
+    <color name="defaultSelectionTextInputDropdownValue">@color/contentPrimary</color>
+    <color name="defaultSelectionTextInputDropdownDisabledSolid">@color/backgroundDisable</color>
+    <color name="defaultSelectionTextInputDropdownDisabledBorder">@color/borderNormal</color>
+    <color name="defaultSelectionTextInputFieldLabel">@color/contentSecondary</color>
+    <color name="defaultSelectionTextInputFieldHint">@color/contentDisable</color>
+    <color name="defaultSelectionTextInputFieldValue">@color/contentPrimary</color>
+    <color name="defaultSelectionTextInputBorderNormal">@color/borderNormal</color>
+    <color name="defaultSelectionTextInputBorderActive">@color/borderActive</color>
+    <color name="defaultSelectionTextInputBorderDisabled">@color/borderDisable</color>
+    <color name="defaultSelectionTextInputBackground">@color/white</color>
+    <color name="defaultSelectionTextInputBackgroundDisabled">@color/backgroundDisable</color>
+    <color name="defaultSelectionTextInputDropdownBorderNormal">@color/transparent</color>
+    <color name="defaultSelectionTextInputDropdownBorderActive">@color/borderActive</color>
+    <color name="defaultSelectionTextInputFieldBorderNormal">@color/transparent</color>
+    <color name="defaultSelectionTextInputFieldBorderActive">@color/borderActive</color>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_default_dropdown_normal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/general_content_description"
+            android:padding="12dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_10dp_default_dropdown_arrow_down" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabel"
+            style="@style/DefaultDropdown.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/defaultDropdownLabel"
+            app:layout_constraintBottom_toTopOf="@+id/etValue"
+            app:layout_constraintEnd_toStartOf="@+id/ivToggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="SmallSp"
+            tools:text="Label" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etValue"
+            style="@style/DefaultDropdown.Value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="@color/defaultDropdownValueText"
+            android:textColorHint="@color/defaultDropdownValueHint"
+            app:layout_constraintBottom_toTopOf="@+id/barrierLabelBottomMember"
+            app:layout_constraintEnd_toStartOf="@+id/ivToggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+            app:layout_goneMarginBottom="17dp"
+            app:layout_goneMarginTop="17dp"
+            tools:hint="Placeholder text"
+            tools:ignore="LabelFor" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierLabelBottomMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvLabel,barrierLabelBottomMember" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvErrorMessage"
+        style="@style/DefaultDropdown.ErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Error message is here" />
+
+</LinearLayout>

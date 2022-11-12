@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dim_gray"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/txtInpectionCount"
+            style="@style/Login.Label1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@color/home_text_color"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/home_inspection_counts"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtInpectionCount"
+            app:layout_constraintStart_toStartOf="@+id/txtInpectionCount"
+            app:layout_constraintTop_toBottomOf="@+id/txtInpectionCount"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.folkus.comman.SquareLayout
+                android:id="@+id/cvCompleted"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardElevation="7dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/cvPending"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtCompletedCount"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/home_count_color"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintVertical_bias="0.30"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarTotalCount"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36dp"
+                        android:indeterminate="true"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/txtTotalCompleted"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtTotalCompleted"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="@string/home_total_cp"
+                        android:textColor="@color/home_label_color"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.492"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.folkus.comman.SquareLayout>
+
+            <com.folkus.comman.SquareLayout
+                android:id="@+id/cvPending"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                app:cardElevation="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cvCompleted"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cvCompleted"
+                app:layout_constraintTop_toTopOf="@+id/cvCompleted">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvPending"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="@string/home_pending_ins"
+                        android:textColor="@color/home_label_color"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.509"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarPendingCount"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36dp"
+                        android:indeterminate="true"
+                        app:layout_constraintBottom_toTopOf="@+id/tvPending"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvPendingCount"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/app_red"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.30" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.folkus.comman.SquareLayout>
+
+            <com.folkus.comman.SquareLayout
+                android:id="@+id/cvMonth"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="7dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/cvCompleted"
+                app:layout_constraintStart_toStartOf="@+id/cvCompleted"
+                app:layout_constraintTop_toBottomOf="@+id/cvCompleted">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvMonthCompleted"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/home_total_completed"
+                        android:textColor="@color/home_label_color"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarCompletedCount"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36dp"
+                        android:indeterminate="true"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/tvMonthCompleted"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMonthCompletedCount"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintVertical_bias="0.30"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.folkus.comman.SquareLayout>
+
+            <com.folkus.comman.SquareLayout
+                android:id="@+id/cvReOpen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cvMonth"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/cvPending"
+                app:layout_constraintStart_toStartOf="@+id/cvPending"
+                app:layout_constraintTop_toBottomOf="@+id/cvCompleted">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvReOpenCount"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/app_red"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTotalReOpen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.30" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarReOpenCount"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36dp"
+                        android:indeterminate="true"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/tvTotalReOpen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTotalReOpen"
+                        style="@style/Login.Label1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/home_total_reopen"
+                        android:textColor="@color/home_label_color"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.folkus.comman.SquareLayout>
+
+            <TextView
+                android:id="@+id/txtInspectionRequest"
+                style="@style/Login.Label1"
+                android:layout_width="295dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_empty_bg"
+                android:gravity="center"
+                android:text="@string/home_inspection_request"
+                android:textColor="@color/btn_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvMonth" />
+
+            <TextView
+                android:id="@+id/txtInspection"
+                style="@style/Login.Label1"
+                android:layout_width="295dp"
+                android:layout_height="54dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rectangle_empty_bg"
+                android:gravity="center"
+                android:text="@string/home_inspections"
+                android:textColor="@color/btn_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInspectionRequest" />
+
+            <TextView
+                android:id="@+id/btnAddVehicle"
+                style="@style/Login.Label1"
+                android:layout_width="171dp"
+                android:layout_height="47dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/round_button"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/home_add_vehicle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_add_vehicle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInspection" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

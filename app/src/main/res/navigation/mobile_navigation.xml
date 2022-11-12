@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.folkus.ui.login.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_global_nav_about"
+            app:destination="@id/nav_about"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_global_nav_contact_us"
+            app:destination="@id/nav_contact_us"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_global_nav_profile"
+            app:destination="@id/nav_profile"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_home_fragment_to_inspection_fragment"
+            app:destination="@id/nav_inspection_tab"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_home_fragment_to_inspection_request_fragment"
+            app:destination="@id/nav_inspection_request"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_add_vehicle"
+            app:destination="@id/nav_add_vehicle"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_notification"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.folkus.ui.login.fragments.ProfileFragment"
+        android:label="@string/menu_my_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.folkus.ui.login.fragments.ContactUSFragment"
+        android:label="@string/menu_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.folkus.ui.login.fragments.AboutUsFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_inspection_request"
+        android:name="com.folkus.ui.login.fragments.InspectionRequestFragment"
+        android:label="@string/title_inspection_request"
+        tools:layout="@layout/inspection_request_fragment">
+        <action
+            android:id="@+id/action_request_to_seller_details"
+            app:destination="@id/sellerInfoFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sellerInfoFragment"
+        android:name="com.folkus.ui.login.fragments.SellerDetailsFragment"
+        android:label="@string/title_seller_info"
+        tools:layout="@layout/seller_details_fragment">
+        <action
+            android:id="@+id/action_sellerInfoFragment_to_nav_inspection_tab2"
+            app:destination="@id/nav_inspection_tab"
+            app:popUpTo="@id/nav_inspection_request"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_inspection_tab"
+        android:name="com.folkus.ui.login.fragments.InspectionFragment"
+        android:label="@string/title_inspection"
+        tools:layout="@layout/inspection_fragment">
+        <action
+            android:id="@+id/tab_to_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/inspectionTabToInspectionDetails"
+            app:destination="@id/navigation"
+            app:popUpTo="@id/nav_inspection_tab"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_vehicle"
+        android:name="com.folkus.ui.login.fragments.AddVehicleFragment"
+        android:label="@string/home_add_vehicle"
+        app:popUpToInclusive="false"
+        tools:layout="@layout/fragment_add_vehicle_fragment">
+        <action
+            android:id="@+id/addVehicleToInspectionTabFragment"
+            app:destination="@id/nav_inspection_tab"
+            app:popUpTo="@id/nav_add_vehicle"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.folkus.ui.login.fragments.NotificationFragment"
+        android:label="@string/title_notification"
+        tools:layout="@layout/notification_fragment" />
+
+    <fragment
+        android:id="@+id/inspectionPendingFragment"
+        android:name="com.folkus.ui.login.fragments.PendingInspectionsFragment"
+        tools:layout="@layout/pending_inspections_fragment" />
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/inspectionDetailsFragment">
+        <fragment
+            android:id="@+id/inspectionDetailsFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionDetailsFragment"
+            android:label="InspectionDetailsFragment">
+            <action
+                android:id="@+id/action_inspectionDetailsFragment_to_inspectionGeneralInfoFragment"
+                app:destination="@id/inspectionGeneralInfoFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionGeneralInfoFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionGeneralInfoFragment"
+            tools:layout="@layout/fragment_inspection_general_info">
+            <action
+                android:id="@+id/generalInfoToExteriorImages"
+                app:destination="@id/inspectionExteriorImagesFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionExteriorImagesFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionExteriorImagesFragment"
+            tools:layout="@layout/fragment_inspection_exterior_images">
+            <action
+                android:id="@+id/exteriorImagesToInteriorImages"
+                app:destination="@id/inspectionInteriorImagesFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionInteriorImagesFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionInteriorImagesFragment"
+            tools:layout="@layout/fragment_inspection_interior_images">
+            <action
+                android:id="@+id/interiorImagesToPowerTrain"
+                app:destination="@id/inspectionPowerTrainFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionPowerTrainFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionPowerTrainFragment"
+            tools:layout="@layout/fragment_inspection_power_train">
+            <action
+                android:id="@+id/powerTrainToMechanical"
+                app:destination="@id/inspectionMechanicalFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionMechanicalFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionMechanicalFragment"
+            tools:layout="@layout/fragment_inspection_mechanical">
+            <action
+                android:id="@+id/mechanicalToTiresWheels"
+                app:destination="@id/tiresWheelsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/tiresWheelsFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionTiresWheelsFragment"
+            tools:layout="@layout/fragment_tires_wheels">
+            <action
+                android:id="@+id/tiresWheelsToExterior"
+                app:destination="@id/inspectionExteriorFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionExteriorFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionExteriorFragment"
+            android:label="Inspection"
+            tools:layout="@layout/fragment_inspection_exterior">
+            <action
+                android:id="@+id/exteriorFragment_to_inspectionInteriorFragment"
+                app:destination="@id/inspectionInteriorFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionInteriorFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionInteriorFragment"
+            tools:layout="@layout/fragment_inspection_interior">
+            <action
+                android:id="@+id/interiorToTestDrive"
+                app:destination="@id/inspectionTestDriveFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/inspectionTestDriveFragment"
+            android:name="com.folkus.ui.login.fragments.inspection.InspectionTestDriveFragment"
+            tools:layout="@layout/fragment_inspection_test_drive">
+            <action
+                android:id="@+id/testDriveToInspectionFragment"
+                app:destination="@id/nav_home"
+                app:popUpTo="@id/testDriveToInspectionFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+    </navigation>
+</navigation>
