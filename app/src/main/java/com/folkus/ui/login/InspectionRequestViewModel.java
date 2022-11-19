@@ -348,6 +348,7 @@ public class InspectionRequestViewModel extends ViewModel {
         return profileEditResponse;
     }
 
+
     private final MutableLiveData<Event<CompletedInspection>> _isSelectInspectionDetail = new MutableLiveData();
     public LiveData<Event<CompletedInspection>> isSelectInspectionDetail = _isSelectInspectionDetail;
 
@@ -394,16 +395,12 @@ public class InspectionRequestViewModel extends ViewModel {
             if (pos == 0) {
                 inspectionRepository.completedInspection();
                 inspectionRepository.getCompletedInspectionResponse().observeForever(completedInspectionResponseResult -> {
-                    try {
-                        if (completedInspectionResponseResult instanceof Result.Success) {
-                            CompletedInspectionResponse data = ((Result.Success<CompletedInspectionResponse>) completedInspectionResponseResult).getData();
-                            completedInspectionResult.setValue(new FinalResult((CompletedInspectionResponse) data));
-                        } else if (completedInspectionResponseResult instanceof Result.Error) {
-                            LoginError error = ((Result.Error<LoginError>) completedInspectionResponseResult).getError();
-                            completedInspectionResult.setValue(new FinalResult((LoginError) error));
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    if (completedInspectionResponseResult instanceof Result.Success) {
+                        CompletedInspectionResponse data = ((Result.Success<CompletedInspectionResponse>) completedInspectionResponseResult).getData();
+                        completedInspectionResult.setValue(new FinalResult((CompletedInspectionResponse) data));
+                    } else if (completedInspectionResponseResult instanceof Result.Error) {
+                        LoginError error = ((Result.Error<LoginError>) completedInspectionResponseResult).getError();
+                        completedInspectionResult.setValue(new FinalResult((LoginError) error));
                     }
                 });
             } else if (pos == 1) {
@@ -748,7 +745,7 @@ public class InspectionRequestViewModel extends ViewModel {
         inspectionRepository.getCancelReasonDropDownResponse().observeForever(cancelReasonDropDownResponseResult -> {
             try {
                 if (cancelReasonDropDownResponseResult instanceof Result.Success) {
-                    // CancelReasonDropDownResponse data = ((Result.Success<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getData();
+                   // CancelReasonDropDownResponse data = ((Result.Success<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getData();
                     cancelReasonDropDownResponse.postValue(new FinalResult((CancelReasonDropDownResponse) ((Result.Success<?>) cancelReasonDropDownResponseResult).getData()));
                 } else if (cancelReasonDropDownResponseResult instanceof Result.Error) {
                     CancelReasonDropDownResponse error = ((Result.Error<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getError();

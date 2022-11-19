@@ -2,7 +2,6 @@ package com.folkus.data.repository;
 
 import android.util.Log;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.folkus.data.Result;
@@ -73,7 +72,6 @@ import com.folkus.data.remote.response.StateResponse;
 import com.folkus.data.remote.response.TestDriveAddImageResponse;
 import com.folkus.data.remote.response.TestDriveResponse;
 import com.folkus.data.remote.response.ZipCodeResponse;
-import com.folkus.ui.login.NetworkChangeReceiver;
 
 import java.io.IOException;
 

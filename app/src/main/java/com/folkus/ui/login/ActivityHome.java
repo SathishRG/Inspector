@@ -86,9 +86,7 @@ import static com.folkus.ui.login.fragments.inspection.powerTrainData.picturePat
 import static com.folkus.ui.login.fragments.inspection.powerTrainData.powerComments_;
 import static com.folkus.ui.login.fragments.inspection.powerTrainData.transferCaseOperation_;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
@@ -110,7 +108,6 @@ import androidx.core.view.MenuProvider;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
@@ -135,7 +132,6 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawer;
     ActionBarDrawerToggle actionBarDrawerToggle;
     MenuInflater menuInflater1;
-    NetworkChangeReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,8 +139,13 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+//        NetworkChangeReceiver receiver = new NetworkChangeReceiver();
+//        registerReceiver(receiver, filter);
+
+
         userViewModel = new ViewModelProvider(this, new UserViewModelFactory(getApplicationContext())).get(UserViewModel.class);
-        receiver = new NetworkChangeReceiver();
+
         setSupportActionBar(binding.appBarHome.toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -174,11 +175,7 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
         userViewModel.profileData.observe(this, loginData -> {
             View mHeaderView = navigationView.getHeaderView(0);
             TextView header = mHeaderView.findViewById(R.id.tvUserNameView);
-            try {
-                header.setText(loginData.getName());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            header.setText(loginData.getName());
         });
     }
 
@@ -193,24 +190,6 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
         binding.appBarHome.search.setVisibility(View.VISIBLE);
         binding.appBarHome.toolbarTitle.setText(title);
         menuHost.removeMenuProvider(menuProvider);
-    }
-
-    public void showDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Internet Connection");
-        builder.setMessage("App required internet connection");
-        builder.setPositiveButton("Retry",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-                        NetworkChangeReceiver receiver = new NetworkChangeReceiver();
-                        registerReceiver(receiver, filter);
-                        dialog.dismiss();
-                    }
-                });
-        AlertDialog alertDialog1 = builder.create();
-        alertDialog1.setCancelable(false);
-        alertDialog1.show();
     }
 
 
@@ -481,17 +460,4 @@ public class ActivityHome extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
-    @Override
-    protected void onPause() {
-        unregisterReceiver(receiver);
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        receiver = new NetworkChangeReceiver();
-        registerReceiver(receiver, filter);
-        super.onResume();
-    }
 }

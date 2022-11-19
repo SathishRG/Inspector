@@ -38,7 +38,6 @@ public class UserViewModel extends ViewModel {
     public MutableLiveData<LoginData> profileData = new MutableLiveData();
     public MutableLiveData<Boolean> logoutNavigation = new MutableLiveData();
     private MutableLiveData<LoginResponse> loginResult1 = new MutableLiveData<>();
-    private MutableLiveData<Boolean> isConnectedInternet = new MutableLiveData<>();
 
     private UserRepository userRepository;
     public static boolean isCalledLoginApiOnce = false; /* for this avoid next response come util wait*/
@@ -48,9 +47,6 @@ public class UserViewModel extends ViewModel {
         this.userRepository = loginRepository;
     }
 
-    public MutableLiveData<Boolean> hasConnectedInternet() {
-        return isConnectedInternet;
-    }
 
     public LiveData<LoginFormState> getLoginFormState() {
         return loginFormState;

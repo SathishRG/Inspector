@@ -1,9 +1,6 @@
 package com.folkus.ui.login;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
@@ -50,17 +47,14 @@ public class ActivityLogin extends AppCompatActivity {
     public int countFailed = 0;
     public int countSuccess = 0;
 
-    private NetworkChangeReceiver networkChangeReceiver;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        networkChangeReceiver = new NetworkChangeReceiver();
-        userViewModel = new ViewModelProvider(this, new UserViewModelFactory(getApplicationContext())).get(UserViewModel.class);
 
+        userViewModel = new ViewModelProvider(this, new UserViewModelFactory(getApplicationContext())).get(UserViewModel.class);
 
         loginButton = new ProgressButton(this, binding.btnLogin.constraintLayout);
 
@@ -130,8 +124,8 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });*/
 
-        //  binding.editTextName.setText("naveenkumar@zhagaramss.com");
-        // binding.editTextPwd.setText("Shaik@1234");
+      //  binding.editTextName.setText("naveenkumar@zhagaramss.com");
+       // binding.editTextPwd.setText("Shaik@1234");
 /*        userViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
@@ -256,25 +250,6 @@ public class ActivityLogin extends AppCompatActivity {
         finish();
     }
 
-    private void showDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Internet Connection");
-        builder.setMessage("App required internet connection");
-        builder.setPositiveButton("Retry",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-                        NetworkChangeReceiver receiver = new NetworkChangeReceiver();
-                        registerReceiver(receiver, filter);
-                        dialog.dismiss();
-                    }
-                });
-        AlertDialog alertDialog1 = builder.create();
-        alertDialog1.setCancelable(false);
-        alertDialog1.show();
-    }
-
-
     private boolean isValidEmail(String username) {
         return Patterns.EMAIL_ADDRESS.matcher(username).matches();
     }
@@ -289,19 +264,5 @@ public class ActivityLogin extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onStart() {
-        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        networkChangeReceiver = new NetworkChangeReceiver();
-        registerReceiver(networkChangeReceiver, filter);
-        super.onStart();
-    }
-
-    @Override
-    protected void onPause() {
-        unregisterReceiver(networkChangeReceiver);
-        super.onPause();
     }
 }

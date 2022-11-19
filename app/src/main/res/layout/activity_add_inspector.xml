@@ -238,7 +238,6 @@
                 android:background="@drawable/edittext_rounded_corners"
                 android:inputType="numberDecimal"
                 android:maxLength="10"
-                android:digits="0123456789"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
