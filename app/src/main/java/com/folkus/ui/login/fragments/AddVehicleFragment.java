@@ -86,6 +86,7 @@ public class AddVehicleFragment extends Fragment {
         binding.dtfVehicleYear.setOnTouchListener((view12, motionEvent) -> {
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                 showYearDialog();
+                binding.dtfVehicleYear.setError(null);
                 return true;
             }
             return false;
@@ -103,12 +104,12 @@ public class AddVehicleFragment extends Fragment {
                             @Override
                             public void onDateSet(DatePicker view13, int year, int monthOfYear, int dayOfMonth) {
                                 binding.dtfSchedule.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                                binding.dtfSchedule.setError(null);
                             }
                         }, year, month, day);
                 picker.show();
                 return true;
             }
-
             return false;
         });
 
@@ -123,6 +124,7 @@ public class AddVehicleFragment extends Fragment {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
                         binding.dtfInspectionTime.setText(hourOfDay + ":" + minute);
+                        binding.dtfInspectionTime.setError(null);
                     }
                 }, hour, minute, DateFormat.is24HourFormat(getActivity()));
                 timePickerDialog.show();
@@ -335,13 +337,13 @@ public class AddVehicleFragment extends Fragment {
                 String comments = binding.dtfVehicleComments.getText().toString();
 
                 if (time.isEmpty()) {
-                    binding.dtfInspectionTime.setError("Please select time");
+                    binding.dtfInspectionTime.setError("Please select inspection time");
                 } else if (year.isEmpty()) {
-                    binding.dtfVehicleYear.setError("Please select year");
+                    binding.dtfVehicleYear.setError("Please select vehicle year");
                 } else if (date.isEmpty()) {
-                    binding.dtfVehicleYear.setError("Please select date");
+                    binding.dtfSchedule.setError("Please select schedule date");
                 } else if (vehicleVin.isEmpty()) {
-                    binding.dtfVehicleYear.setError("Please enter VIN");
+                    binding.dtfCustomerVehicle.setError("Please enter vehicle VIN");
                 } else {
                     if (isValidMobileNumber(phone_no)) {
                         submitButton.buttonActivated();

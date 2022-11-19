@@ -102,6 +102,7 @@ public class DialogForgetPassword extends DialogFragment {
             @Override
             public void onClick(View v) {
                 dismiss();
+                dtfForgetPasswordEmail.setError(null);
                 dtfForgetPasswordEmail.setText("");
             }
         });
@@ -152,6 +153,7 @@ public class DialogForgetPassword extends DialogFragment {
                             if (success) {
                                 hideProgress(progressButton);
                                 userViewModel.doLogout();
+                                dtfForgetPasswordEmail.setError(null);
                                 Toast.makeText(requireActivity(), "Email sent successfully", Toast.LENGTH_SHORT).show();
                             } else {
                                 hideProgress(progressButton);
@@ -183,5 +185,6 @@ public class DialogForgetPassword extends DialogFragment {
     public void onDetach() {
         super.onDetach();
         userViewModel.observeForgetPassword.removeObservers(requireActivity());
+        dtfForgetPasswordEmail.setError(null);
     }
 }

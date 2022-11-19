@@ -39,6 +39,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -141,7 +142,14 @@ public class InspectionExteriorImagesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    navController.navigate(R.id.exteriorImagesToInteriorImages);
+                    if (carFront != null || passengerSide != null || driverSide != null || rearSide != null || rearDriverSide != null
+                            || rearPassengerSide != null || upperSide != null || underCarriage != null || underCarriageLeftSide != null || underCarriageRightSide != null
+                            || underCarriageFront != null || underCarriageBack != null || dsFrontPanel != null || vin != null || dsFrontDoor != null
+                            || dsRearDoor != null || dsRearPanel != null) {
+                        navController.navigate(R.id.exteriorImagesToInteriorImages);
+                    } else {
+                        Toast.makeText(requireContext(), R.string.plase_add_image, Toast.LENGTH_SHORT).show();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

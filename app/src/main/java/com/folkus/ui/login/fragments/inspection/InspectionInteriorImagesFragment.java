@@ -2,6 +2,7 @@ package com.folkus.ui.login.fragments.inspection;
 
 import static com.folkus.ui.login.ActivityHome.navController;
 import static com.folkus.ui.login.InspectionRequestViewModel.generalInfo;
+import static com.folkus.ui.login.fragments.inspection.InspectionExteriorImageData.passengerSide;
 import static com.folkus.ui.login.fragments.inspection.InspectionInteriorImageData.dsFrontCarpet;
 import static com.folkus.ui.login.fragments.inspection.InspectionInteriorImageData.dsFrontDoor;
 import static com.folkus.ui.login.fragments.inspection.InspectionInteriorImageData.dsFrontSeat;
@@ -104,7 +105,12 @@ public class InspectionInteriorImagesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    navController.navigate(R.id.interiorImagesToPowerTrain);
+                    if (odoMeters != null || dsFrontSeat != null || dsFrontDoor != null || dsFrontCarpet != null || dsRearSeat != null
+                            || dsRearDoor != null || engineLower != null) {
+                        navController.navigate(R.id.interiorImagesToPowerTrain);
+                    } else {
+                        Toast.makeText(requireContext(), R.string.plase_add_image, Toast.LENGTH_SHORT).show();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

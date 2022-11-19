@@ -127,6 +127,9 @@ public class InspectionGeneralInfoFragment extends Fragment {
                 } else if (vehicleModel == null) {
                     Toast.makeText(requireContext(), "Select vehicle model", Toast.LENGTH_LONG).show();
                 } else {
+                    binding.inspectionDate.setError(null);
+                    binding.vehicleYear.setError(null);
+                    binding.sellerName.setError(null);
                     try {
                         GeneralInfoRequest generalInfoRequest = new GeneralInfoRequest();
                         generalInfoRequest.setCarId(inspection.getCar_id());
@@ -359,6 +362,7 @@ public class InspectionGeneralInfoFragment extends Fragment {
         binding.inspectionDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                binding.inspectionDate.setError(null);
                 new DatePickerDialog(requireContext(), date, inspectionCalendar.get(Calendar.YEAR), inspectionCalendar.get(Calendar.MONTH), inspectionCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
@@ -366,6 +370,7 @@ public class InspectionGeneralInfoFragment extends Fragment {
         binding.vehicleYear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                binding.vehicleYear.setError(null);
                 showYearDialog();
             }
         });

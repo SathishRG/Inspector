@@ -265,6 +265,7 @@
     <string name="cancel_inspection">Cancel Inspection</string>
     <string name="upload_add_image_video">Upload Image/Video</string>
     <string name="add_profile_photo">Add Profile Photo</string>
+    <string name="plase_add_image">Please add images</string>
 
 
 </resources>
