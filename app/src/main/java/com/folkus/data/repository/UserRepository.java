@@ -50,6 +50,7 @@ public class UserRepository {
     private NetworkService networkService;
     private UserPreferences userPreferences;
 
+
     private Result user = null;
 
     private UserRepository(NetworkService networkService, UserPreferences userPreferences) {
@@ -215,8 +216,11 @@ public class UserRepository {
     }
 
     public void getCountData() {
+        User currentUser = getCurrentUser();
+        int userId = currentUser.getUserId();
+
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
         networkService.getCountData(countRequest).enqueue(new Callback<CountResponse>() {
             @Override
             public void onResponse(Call<CountResponse> call, Response<CountResponse> response) {

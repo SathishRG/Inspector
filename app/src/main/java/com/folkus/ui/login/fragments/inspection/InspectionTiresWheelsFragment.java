@@ -155,6 +155,7 @@ public class InspectionTiresWheelsFragment extends Fragment {
                     InspectionTiresWheelsRequest inspectionTiresWheelsRequest = new InspectionTiresWheelsRequest();
                     inspectionTiresWheelsRequest.setCarId(carId);
                     inspectionTiresWheelsRequest.setSellerDealerId(sellerDealerId);
+                    inspectionTiresWheelsRequest.setInspectorId(inspectorId);
                     inspectionTiresWheelsRequest.setTreadDepth(treadDepth);
                     inspectionTiresWheelsRequest.setFourTiresCondition(fourTiresCondition);
                     inspectionTiresWheelsRequest.setScratches(anyScratchesOnWheels);

@@ -3,7 +3,6 @@ package com.folkus.ui.login.fragments;
 import static com.folkus.ui.login.ActivityHome.navController;
 import static com.folkus.ui.login.Constant.position;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -377,22 +375,22 @@ public class PendingInspectionsFragment extends Fragment {
             public boolean onQueryTextSubmit(String query) {
                 if (position == 2) {
                     MonthSearchRequest monthSearchRequest = new MonthSearchRequest();
-                    monthSearchRequest.setInspectorId("1");
+                    monthSearchRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
                     monthSearchRequest.setSearch(query);
                     inspectionRequestViewModel.monthSearchApi(monthSearchRequest);
                 } else if (position == 3) {
                     ReopenSearchRequest reopenSearchRequest = new ReopenSearchRequest();
-                    reopenSearchRequest.setInspectorId("1");
+                    reopenSearchRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
                     reopenSearchRequest.setSearch(query);
                     inspectionRequestViewModel.reOpenSearchApi(reopenSearchRequest);
                 } else if (position == 1) {
                     PendingSearchRequest pendingSearchRequest = new PendingSearchRequest();
-                    pendingSearchRequest.setInspectorId("1");
+                    pendingSearchRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
                     pendingSearchRequest.setSearch(query);
                     inspectionRequestViewModel.pendingSearchApi(pendingSearchRequest);
                 } else if (position == 0) {
                     CompleteSearchRequest completeSearchRequest = new CompleteSearchRequest();
-                    completeSearchRequest.setInspectorId("1");
+                    completeSearchRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
                     completeSearchRequest.setSearch(query);
                     inspectionRequestViewModel.completeSearchApi(completeSearchRequest);
                 }

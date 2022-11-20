@@ -31,7 +31,7 @@ public class InspectionViewModelFactory implements ViewModelProvider.Factory {
             UserRepository userRepository = UserRepository.getInstance(newsApi, userPreferences);
             InspectionRepository inspectionRepository = InspectionRepository.getInstance(newsApi, userPreferences,userRepository);
 
-            return (T) new InspectionRequestViewModel(inspectionRepository);
+            return (T) new InspectionRequestViewModel(inspectionRepository,userRepository);
         } else {
             throw new IllegalArgumentException("Unknown ViewModel class");
         }

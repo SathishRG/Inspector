@@ -363,7 +363,7 @@ public class AddVehicleFragment extends Fragment {
                         addVehicleRequest.setComments(comments);
                         addVehicleRequest.setDate(date);
                         addVehicleRequest.setTime(time);
-                        addVehicleRequest.setInspector_id("1");
+                        addVehicleRequest.setInspector_id(inspectionRequestViewModel.getInspectorId());
                         inspectionRequestViewModel.addVehicle(addVehicleRequest);
                         binding.dtfCustomerPhone.setError(null);
                     } else {

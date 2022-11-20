@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.folkus.comman.Event;
 import com.folkus.data.Result;
+import com.folkus.data.model.User;
 import com.folkus.data.remote.request.AcceptRequest;
 import com.folkus.data.remote.request.AddExteriorImagesRequest;
 import com.folkus.data.remote.request.AddInspectorRequest;
@@ -73,6 +74,7 @@ import com.folkus.data.remote.response.TestDriveAddImageResponse;
 import com.folkus.data.remote.response.TestDriveResponse;
 import com.folkus.data.remote.response.ZipCodeResponse;
 import com.folkus.data.repository.InspectionRepository;
+import com.folkus.data.repository.UserRepository;
 import com.folkus.ui.login.model.FinalResult;
 
 import java.util.ArrayList;
@@ -81,6 +83,7 @@ public class InspectionRequestViewModel extends ViewModel {
 
     private InspectionRequestData inspectionRequestData;
     private InspectionRepository inspectionRepository;
+    private UserRepository userRepository;
     private MutableLiveData<FinalResult> inspectionRequestResult = new MutableLiveData<>();
     private MutableLiveData<FinalResult> pendingInspectionResult = new MutableLiveData<>();
     private MutableLiveData<FinalResult> completedInspectionResult = new MutableLiveData<>();
@@ -184,8 +187,9 @@ public class InspectionRequestViewModel extends ViewModel {
         this.inspectionRequestData = inspectionRequestData;
     }
 
-    public InspectionRequestViewModel(InspectionRepository inspectionRepository) {
+    public InspectionRequestViewModel(InspectionRepository inspectionRepository, UserRepository userRepository) {
         this.inspectionRepository = inspectionRepository;
+        this.userRepository = userRepository;
     }
 
     public MutableLiveData<FinalResult> getInspectionRequestResult() {
@@ -745,7 +749,7 @@ public class InspectionRequestViewModel extends ViewModel {
         inspectionRepository.getCancelReasonDropDownResponse().observeForever(cancelReasonDropDownResponseResult -> {
             try {
                 if (cancelReasonDropDownResponseResult instanceof Result.Success) {
-                   // CancelReasonDropDownResponse data = ((Result.Success<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getData();
+                    // CancelReasonDropDownResponse data = ((Result.Success<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getData();
                     cancelReasonDropDownResponse.postValue(new FinalResult((CancelReasonDropDownResponse) ((Result.Success<?>) cancelReasonDropDownResponseResult).getData()));
                 } else if (cancelReasonDropDownResponseResult instanceof Result.Error) {
                     CancelReasonDropDownResponse error = ((Result.Error<CancelReasonDropDownResponse>) cancelReasonDropDownResponseResult).getError();
@@ -1064,6 +1068,10 @@ public class InspectionRequestViewModel extends ViewModel {
                 e.printStackTrace();
             }
         });
+    }
+
+    public String getInspectorId() {
+        return String.valueOf(userRepository.getCurrentUser().getUserId());
     }
 
 }

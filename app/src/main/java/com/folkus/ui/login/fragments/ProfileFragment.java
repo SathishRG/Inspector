@@ -219,7 +219,7 @@ public class ProfileFragment extends Fragment {
                                     profileEditRequest.setDob(dateOfBirth);
                                     profileEditRequest.setPhoneNo(contact);
                                     profileEditRequest.setAddress(address);
-                                    profileEditRequest.setInspectorId("1");
+                                    profileEditRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
 
                                     ArrayList<ProfileImageData> profileImageDataList = new ArrayList<>();
                                     ProfileImageData profileImageData = new ProfileImageData();
@@ -281,7 +281,7 @@ public class ProfileFragment extends Fragment {
                                 profileEditRequest.setDob(dateOfBirth);
                                 profileEditRequest.setPhoneNo(contact);
                                 profileEditRequest.setAddress(address);
-                                profileEditRequest.setInspectorId("1");
+                                profileEditRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
 
                                 ArrayList<ProfileImageData> profileImageDataList = new ArrayList<>();
                                 ProfileImageData profileImageData = new ProfileImageData();
@@ -380,7 +380,7 @@ public class ProfileFragment extends Fragment {
                 profileEditRequest.setDob(dateOfBirth);
                 profileEditRequest.setPhoneNo(contact);
                 profileEditRequest.setAddress(address);
-                profileEditRequest.setInspectorId("1");
+                profileEditRequest.setInspectorId(inspectionRequestViewModel.getInspectorId());
 
                 ArrayList<ProfileImageData> profileImageDataList = new ArrayList<>();
                 ProfileImageData profileImageData = new ProfileImageData();

@@ -300,7 +300,7 @@ public class InspectionRepository {
         int userId = currentUser.getUserId();
 
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
         networkService.getInspectionRequestData(countRequest).enqueue(new Callback<InspectionRequestResponse>() {
             @Override
             public void onResponse(Call<InspectionRequestResponse> call, Response<InspectionRequestResponse> response) {
@@ -334,7 +334,7 @@ public class InspectionRepository {
         int userId = currentUser.getUserId();
 
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
 
         networkService.getPendingInspectionData(countRequest).enqueue(new Callback<CompletedInspectionResponse>() {
             @Override
@@ -365,7 +365,7 @@ public class InspectionRepository {
         User currentUser = userRepository.getCurrentUser();
         int userId = currentUser.getUserId();
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
         networkService.getCompletedInspectionData(countRequest).enqueue(new Callback<CompletedInspectionResponse>() {
             @Override
             public void onResponse(Call<CompletedInspectionResponse> call, Response<CompletedInspectionResponse> response) {
@@ -396,7 +396,7 @@ public class InspectionRepository {
         int userId = currentUser.getUserId();
 
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
         networkService.getThisMonthCompletedInspectionData(countRequest).enqueue(new Callback<CompletedInspectionResponse>() {
             @Override
             public void onResponse(Call<CompletedInspectionResponse> call, Response<CompletedInspectionResponse> response) {
@@ -426,7 +426,7 @@ public class InspectionRepository {
         int userId = currentUser.getUserId();
 
         CountRequest countRequest = new CountRequest();
-        countRequest.setInspectorId(1);
+        countRequest.setInspectorId(userId);
         networkService.getThisMonthReopenedInspectionData(countRequest).enqueue(new Callback<CompletedInspectionResponse>() {
             @Override
             public void onResponse(Call<CompletedInspectionResponse> call, Response<CompletedInspectionResponse> response) {
